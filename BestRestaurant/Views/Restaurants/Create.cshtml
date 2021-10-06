@@ -1,0 +1,16 @@
+@model BestRestaurant.Models.Restaurant
+
+@using (Html.BeginForm())
+{
+
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  @Html.LabelFor(model => model.Capacity)
+  @Html.TextBoxFor(model => model.Capacity)
+  @Html.LabelFor(model => model.OutdoorSeating)
+  @Html.TextBoxFor(model => model.OutdoorSeating)
+
+  <input type="submit" value="Add restaurant!" class="btn btn-warning">
+
+}
+<p>@Html.ActionLink("See all Restaurants", "Index")</p>

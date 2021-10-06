@@ -1,0 +1,9 @@
+@model BestRestaurant.Models.Restaurant;
+
+<h2>Restaurant details</h2>
+<hr>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h4>@Html.DisplayNameFor(model => model.Capacity): @Html.DisplayFor(model => model.Capacity)</h4>
+<h4>@Html.DisplayNameFor(model => model.OutdoorSeating): @Html.DisplayFor(model => model.OutdoorSeating)</h4>
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RestaurantId })</p>

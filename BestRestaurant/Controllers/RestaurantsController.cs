@@ -22,7 +22,45 @@ namespace BestRestaurant.Controllers
     List<Restaurant> model = _db.Restaurants.ToList();
     return View(model);
   }
-  
+  //get create()
+  public ActionResult Create()
+  {
+    return View();
+  }
+  //post create()
+
+  [HttpPost]
+  public ActionResult Create(Restaurant restaurant)
+  {
+    _db.Restaurants.Add(restaurant);
+    _db.SaveChanges();
+    return RedirectToAction("Index");
+  }
+
+  //get edit()
+  public ActionResult Edit(int id)
+  {
+    var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+    return View(thisRestaurant);
+  }
+  //post edit()
+  [HttpPost]
+  public ActionResult Edit(Restaurant restaurant)
+  {
+    _db.Entry(restaurant).State = EntityState.Modified;
+    _db.SaveChanges();
+    return RedirectToAction("Index");
+  }
+
+  //get details
+  public ActionResult Details(int id)
+  {
+    var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+    return View(thisRestaurant);
+  }
+
+  //get delete()
+  //post delete()
   
   
   
