@@ -1,0 +1,8 @@
+@model BestRestaurant.Models.Cuisine;
+
+<h2>Cuisine Details</h2>
+<hr>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<p>@Html.ActionLink("Back to List", "Index")</p>
+<p>@Html.ActionLink("Edit this Cuisine", "Edit", new {id = Model.CuisineId})</p>
+<p>@Html.ActionLink("Delete Cuisine", "Delete", new {id = Model.CuisineId})</p>

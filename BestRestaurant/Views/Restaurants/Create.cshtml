@@ -10,6 +10,9 @@
   @Html.LabelFor(model => model.OutdoorSeating)
   @Html.TextBoxFor(model => model.OutdoorSeating)
 
+    @Html.LabelFor(model => model.Cuisine)
+    @Html.DropDownList("CuisineId")
+
   <input type="submit" value="Add restaurant!" class="btn btn-warning">
 
 }

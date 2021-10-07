@@ -1,0 +1,11 @@
+@model BestRestaurant.Models.Cuisine
+
+@using (Html.BeginForm())
+{
+
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  <input type="submit" value="Add cuisine" class="btn btn-warning">
+}
+
+<p>@Html.ActionLink("see all cuisines", "Index")</p>
